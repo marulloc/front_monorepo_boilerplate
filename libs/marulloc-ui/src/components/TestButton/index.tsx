@@ -3,8 +3,8 @@
 // import React, { ReactElement } from 'react';
 
 type TProps = {
-    // children?: ReactElement | string;
-    children?: any;
+    children?: string;
+    // children?: any;
 };
 
 const TestButton = ({ children }) => {
