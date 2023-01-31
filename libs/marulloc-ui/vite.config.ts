@@ -9,29 +9,23 @@ export default defineConfig({
         react(),
         dts({
             insertTypesEntry: true,
-            // tsConfigFilePath: 'tsconfig.json',
         }),
     ],
     build: {
         lib: {
             entry: path.resolve(__dirname, 'src/lib/index.ts'),
-            name: 'MyLib',
-            // formats: ['es', 'umd'],
-            fileName: (format) => `my-lib.${format}.js`,
+            name: 'marulloc-ui',
+            formats: ['es', 'umd'],
+            fileName: (format) => `marulloc-ui-lib.${format}.js`,
         },
-        //     rollupOptions: {
-        //         external: [
-        //             'react',
-        //             'react-dom',
-        //             // 'styled-components'
-        //         ],
-        //         output: {
-        //             globals: {
-        //                 react: 'React',
-        //                 'react-dom': 'ReactDOM',
-        //                 // 'styled-components': 'styled',
-        //             },
-        //         },
-        //     },
+        rollupOptions: {
+            external: ['react', 'react-dom'],
+            output: {
+                globals: {
+                    react: 'React',
+                    'react-dom': 'ReactDOM',
+                },
+            },
+        },
     },
 });
