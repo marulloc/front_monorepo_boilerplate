@@ -548,14 +548,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@marulloc/marulloc-ui@workspace:libs/marulloc-ui":
+"@marulloc/marulloc-ui@*, @marulloc/marulloc-ui@workspace:libs/marulloc-ui":
   version: 0.0.0-use.local
   resolution: "@marulloc/marulloc-ui@workspace:libs/marulloc-ui"
   dependencies:
     "@types/react": ^18.0.26
     "@types/react-dom": ^18.0.9
     "@vitejs/plugin-react": ^3.0.1
-    "@vitejs/plugin-react-swc": ^3.0.0
     react: ^18.2.0
     react-dom: ^18.2.0
     typescript: ^4.9.3
@@ -568,6 +567,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@marulloc/next13-playground@workspace:apps/next13-playground"
   dependencies:
+    "@marulloc/marulloc-ui": "*"
     "@next/font": ^13.1.6
     "@types/eslint": ^8
     "@types/node": 18.11.18
@@ -879,115 +879,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@swc/core-darwin-arm64@npm:1.3.29":
-  version: 1.3.29
-  resolution: "@swc/core-darwin-arm64@npm:1.3.29"
-  conditions: os=darwin & cpu=arm64
-  languageName: node
-  linkType: hard
-
-"@swc/core-darwin-x64@npm:1.3.29":
-  version: 1.3.29
-  resolution: "@swc/core-darwin-x64@npm:1.3.29"
-  conditions: os=darwin & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@swc/core-linux-arm-gnueabihf@npm:1.3.29":
-  version: 1.3.29
-  resolution: "@swc/core-linux-arm-gnueabihf@npm:1.3.29"
-  conditions: os=linux & cpu=arm
-  languageName: node
-  linkType: hard
-
-"@swc/core-linux-arm64-gnu@npm:1.3.29":
-  version: 1.3.29
-  resolution: "@swc/core-linux-arm64-gnu@npm:1.3.29"
-  conditions: os=linux & cpu=arm64 & libc=glibc
-  languageName: node
-  linkType: hard
-
-"@swc/core-linux-arm64-musl@npm:1.3.29":
-  version: 1.3.29
-  resolution: "@swc/core-linux-arm64-musl@npm:1.3.29"
-  conditions: os=linux & cpu=arm64 & libc=musl
-  languageName: node
-  linkType: hard
-
-"@swc/core-linux-x64-gnu@npm:1.3.29":
-  version: 1.3.29
-  resolution: "@swc/core-linux-x64-gnu@npm:1.3.29"
-  conditions: os=linux & cpu=x64 & libc=glibc
-  languageName: node
-  linkType: hard
-
-"@swc/core-linux-x64-musl@npm:1.3.29":
-  version: 1.3.29
-  resolution: "@swc/core-linux-x64-musl@npm:1.3.29"
-  conditions: os=linux & cpu=x64 & libc=musl
-  languageName: node
-  linkType: hard
-
-"@swc/core-win32-arm64-msvc@npm:1.3.29":
-  version: 1.3.29
-  resolution: "@swc/core-win32-arm64-msvc@npm:1.3.29"
-  conditions: os=win32 & cpu=arm64
-  languageName: node
-  linkType: hard
-
-"@swc/core-win32-ia32-msvc@npm:1.3.29":
-  version: 1.3.29
-  resolution: "@swc/core-win32-ia32-msvc@npm:1.3.29"
-  conditions: os=win32 & cpu=ia32
-  languageName: node
-  linkType: hard
-
-"@swc/core-win32-x64-msvc@npm:1.3.29":
-  version: 1.3.29
-  resolution: "@swc/core-win32-x64-msvc@npm:1.3.29"
-  conditions: os=win32 & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@swc/core@npm:^1.3.22":
-  version: 1.3.29
-  resolution: "@swc/core@npm:1.3.29"
-  dependencies:
-    "@swc/core-darwin-arm64": 1.3.29
-    "@swc/core-darwin-x64": 1.3.29
-    "@swc/core-linux-arm-gnueabihf": 1.3.29
-    "@swc/core-linux-arm64-gnu": 1.3.29
-    "@swc/core-linux-arm64-musl": 1.3.29
-    "@swc/core-linux-x64-gnu": 1.3.29
-    "@swc/core-linux-x64-musl": 1.3.29
-    "@swc/core-win32-arm64-msvc": 1.3.29
-    "@swc/core-win32-ia32-msvc": 1.3.29
-    "@swc/core-win32-x64-msvc": 1.3.29
-  dependenciesMeta:
-    "@swc/core-darwin-arm64":
-      optional: true
-    "@swc/core-darwin-x64":
-      optional: true
-    "@swc/core-linux-arm-gnueabihf":
-      optional: true
-    "@swc/core-linux-arm64-gnu":
-      optional: true
-    "@swc/core-linux-arm64-musl":
-      optional: true
-    "@swc/core-linux-x64-gnu":
-      optional: true
-    "@swc/core-linux-x64-musl":
-      optional: true
-    "@swc/core-win32-arm64-msvc":
-      optional: true
-    "@swc/core-win32-ia32-msvc":
-      optional: true
-    "@swc/core-win32-x64-msvc":
-      optional: true
-  checksum: 4f95e8f02c79e36be9dc8825e0343274c0df6d37e8593361227fad65d86b2208fb6564857493ee2cfcc3ba3d45c873c2f7304a0c74108a4b0d6bb78adde6ec8e
-  languageName: node
-  linkType: hard
-
 "@swc/helpers@npm:0.4.14":
   version: 0.4.14
   resolution: "@swc/helpers@npm:0.4.14"
@@ -1226,17 +1117,6 @@ __metadata:
     "@typescript-eslint/types": 5.49.0
     eslint-visitor-keys: ^3.3.0
   checksum: 46dc7bc713e8825d1fccba521fdf7c6e2f8829e491c2afd44dbe4105c6432e3c3dfe7e1ecb221401269d639264bb4af77b60a7b65521fcff9ab02cd31d8ef782
-  languageName: node
-  linkType: hard
-
-"@vitejs/plugin-react-swc@npm:^3.0.0":
-  version: 3.0.1
-  resolution: "@vitejs/plugin-react-swc@npm:3.0.1"
-  dependencies:
-    "@swc/core": ^1.3.22
-  peerDependencies:
-    vite: ^4
-  checksum: 4023b8a582d8f30d0969dd485b2de1ffed8b5110ee732e8129c427cb9ce6c4238343afe4c5bf451cfebf2822df67ff989915231f93e0c94ac74a1aca42fb2f00
   languageName: node
   linkType: hard
 
